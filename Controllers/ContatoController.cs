@@ -12,6 +12,7 @@ namespace ModuloAPI.Controllers
     [Route("[controller]")]
     public class ContatoController : ControllerBase
     {
+        //Precisa ter a propriedade privada do context
         private readonly AgendaContext _context;
         public ContatoController(AgendaContext context)
         {

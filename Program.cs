@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//Passa a conexão para o DBContext
 // Add services to the container.
 builder.Services.AddDbContext<AgendaContext>(
     options => options.UseSqlServer(

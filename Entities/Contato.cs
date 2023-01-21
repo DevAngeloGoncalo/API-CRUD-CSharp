@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace ModuloAPI.Entities
 {
+    //ENTIDADE CONTATO É AO MESMO TEMPO UMA CLASSE QUE VAMOS TRABALHAR NA API E TAMBÉM UMA TABELA DO BD
     public class Contato
     {
         public int Id { get; set; }
