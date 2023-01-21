@@ -43,6 +43,14 @@ namespace ModuloAPI.Controllers
             }
         }  
 
+        [HttpGet("ObterPorNome")]
+        public IActionResult ObterPorNome(string nome)
+        {
+            //vai pegar o contato com o nome recebido pela API.
+            var contato = _context.Contatos.Where(x => x.Nome.Contains(nome));
+            return Ok(contato);
+        }
+
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Contato contato)
         {
