@@ -25,7 +25,8 @@ namespace ModuloAPI.Controllers
             _context.Add(contato);
             _context.SaveChanges();
 
-            return Ok(contato);     
+            //Depois de criar um contato ele chama o ObterPorID, para mostrar na API
+            return CreatedAtAction(nameof(ObterPorID), new { id = contato.Id}, contato);     
         }
 
         [HttpGet("{id}")]
